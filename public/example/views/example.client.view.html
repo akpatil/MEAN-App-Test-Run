@@ -1,0 +1,16 @@
+<section ng-controller="ExampleController">
+	
+	<div data-ng-show="!authentication.user">
+		<a href="/signin">Sign In</a>
+		<a href="/signup">Sign Up</a>
+	</div>
+
+	<div data-ng-show="authentication.user">
+		<h1>Hello <span data-ng-bind="authentication.user.fullname"></span></h1>
+		<a href="/signout">Sign Out</a>
+		<ul>
+			<li><a href="/#!/article/">List Article</a></li>
+			<li><a href="/#!/article/create">Create Article</a></li>
+		</ul>
+	</div>
+</section>
